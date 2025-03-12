@@ -17,12 +17,16 @@ function compareJsonObjects(json1, json2) {
         item2[key] != null &&
         !compareJsonObjects(item1[key], item2[key])
       ) {
-        console.log(1);
+        console.log(key)
+        console.log("json1",item1[key])
+        console.log("json2",item2[key])
         return false;
       }
     } else {
       if (JSON.stringify(item1[key]) !== JSON.stringify(item2[key])) {
-        console.log(2);
+        console.log(key)
+        console.log("json1",item1[key])
+        console.log("json2",item2[key])
         return false;
       }
     }
